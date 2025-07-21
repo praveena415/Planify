@@ -1,0 +1,73 @@
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  backdrop-filter: blur(6px); 
+}
+
+
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #d0dce7;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s border;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+#msg {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #1e3a8a;
+}
