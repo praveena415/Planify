@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Planify - Travel Planner</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <img src="assets/bg-shape1.jpeg" class="bg-shape shape1">
+
+  <!-- Navbar (shows links for logged in users; login/signup visible when not logged in) -->
+  <div class="navbar">
+    <h2>✈️ Planify</h2>
+    <div class="nav-links" id="navLinks">
+      <a id="navDashboard" href="dashboard.html" class="auth-only" style="display:none">Dashboard</a>
+      <a id="navCreate" href="create-trip.html" class="auth-only" style="display:none">Create Trip</a>
+      <a id="navShare" href="share-trip.html" class="auth-only" style="display:none">Share Trip</a>
+
+      <a id="navLogin" href="login.html">Login</a>
+      <a id="navSignup" href="signup.html">Create Account</a>
+
+      <a id="navLogout" href="#" class="auth-only" style="display:none" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>✨ Welcome to Planify</h1>
+    <p>
+      Your all-in-one travel planning companion!  
+      Organize trips, schedule activities, manage packing lists, track expenses,  
+      and collaborate with friends — all in one place 💜.
+    </p>
+
+    <a class="btn" href="signup.html">Get Started</a>
+  </div>
+
+  <footer>
+    <p>Planify — Simplifying travel for explorers 💼🌍</p>
+    <p class="small">© 2025 Planify | Built with ❤️ by Praveena.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard - Planify</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <img src="assets/bg-shape1.jpeg" class="bg-shape shape1">
+  
+  <div class="navbar">
+    <h2>✈️ Planify</h2>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-trip.html">Create Trip</a>
+      <a href="share-trip.html">Share Trip</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <h1 class="dashboard-title">Your Travel Dashboard 🌍✨</h1>
+
+  <div id="tripList" class="dashboard-grid">
+    <!-- Trips loaded dynamically -->
+  </div>
+
+  <footer>
+    <p>
+      💜 Planify helps travellers organize their journeys with ease —  
+      From destinations and activities to packing lists and collaboration!  
+      Let your next adventure be stress-free. ✨
+    </p>
+  </footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

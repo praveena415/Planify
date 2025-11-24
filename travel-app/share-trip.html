@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Share Trip</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <img src="assets/bg-shape3.jpeg" class="bg-shape shape1">
+
+  <div class="navbar">
+    <h2>✈️ Planify</h2>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-trip.html">Create Trip</a>
+      <a href="share-trip.html">Share</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Share Your Trip 💌</h1>
+
+    <input id="shareEmail" type="email" placeholder="Enter email to share with" class="input"><br><br>
+
+    <button class="btn" onclick="shareTrip()">Send Invite</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/share-trip.js"></script>
+
+</body>
+</html>

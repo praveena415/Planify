@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Trip Details</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .trip-container { width: 90%; max-width: 900px; margin: 40px auto; }
+    .trip-header { display:flex; gap:20px; align-items:center; justify-content:space-between; }
+    .trip-meta { color:#666; margin-top:8px; }
+    .activity-list { margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+    .activity { padding:12px; background:#fff; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); }
+    .small { color:#666; font-size:14px; }
+    .input-inline { padding:8px;border-radius:8px;border:1px solid #ddd;width:60%; }
+  </style>
+</head>
+<body>
+  <img src="assets/bg-shape3.jpeg" class="bg-shape shape2">
+  <div class="navbar">
+    <h2>✈️ Planify</h2>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-trip.html">Create Trip</a>
+      <a href="share-trip.html">Share Trip</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="trip-container" id="tripContainer">
+    <div id="status" class="small">Loading trip…</div>
+
+    <div id="tripContent" style="display:none;">
+      <div class="trip-header">
+        <div>
+          <h1 id="tripTitle">Trip</h1>
+          <div id="tripMeta" class="trip-meta"></div>
+        </div>
+        <div>
+          <button class="btn" id="btnExport" onclick="downloadTrip()">Export</button>
+        </div>
+      </div>
+
+      <section style="margin-top:20px">
+        <h3>Activities</h3>
+        <div class="activity-list" id="activityList"></div>
+
+        <div style="margin-top:12px">
+          <input id="activityInput" placeholder="Add activity (e.g., Visit beach at 4pm)" class="input-inline">
+          <button class="btn" onclick="addActivity()">Add</button>
+        </div>
+      </section>
+
+      <section style="margin-top:20px">
+        <h3>Packing List</h3>
+        <div id="packingList" class="activity-list"></div>
+        <div style="margin-top:12px">
+          <input id="packingInput" placeholder="Add packing item" class="input-inline">
+          <button class="btn" onclick="addPacking()">Add</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/trip-details.js"></script>
+</body>
+</html>
