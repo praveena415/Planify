@@ -114,45 +114,6 @@ Visit: [https://console.firebase.google.com](https://console.firebase.google.com
 
 Copy your Firebase config into `firebase.js`.
 
-### 4️⃣ Firestore Rules
-
-For secure user-based access:
-
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    
-    match /trips/{tripId} {
-      allow read, write: if request.auth != null
-        && request.auth.uid == resource.data.owner;
-      allow create: if request.auth != null 
-        && request.resource.data.owner == request.auth.uid;
-    }
-
-      match /trips/{tripId}/{collection}/{docId} {
-      allow read, write: if request.auth != null 
-        && request.auth.uid == get(/databases/$(database)/documents/trips/$(tripId)).data.owner;
-    }
-  }
-}
-
-### 5️⃣ Storage Rules
-
-rules_version = '2';
-service firebase.storage {
-  match /b/{bucket}/o {
-    
-    match /tripDocuments/{tripId}/{fileName} {
-      allow read, write: if request.auth != null 
-        && request.auth.uid == resource.metadata.owner;
-      allow create: if request.auth != null 
-        && request.resource.metadata.owner == request.auth.uid;
-    }
-  }
-}
-
----
-
 ## 🚀 How to Run
 
 ### ✔ Option A — Open Locally
