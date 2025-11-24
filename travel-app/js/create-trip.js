@@ -1,4 +1,3 @@
-// js/create-trip.js
 function $(id){ return document.getElementById(id); }
 
 let currentUser = null;

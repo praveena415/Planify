@@ -1,4 +1,3 @@
-// js/dashboard.js
 function $(id){ return document.getElementById(id); }
 function escapeHtml(s){ if(!s) return ''; return String(s).replace(/[&<>"']/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]); }
 

@@ -1,6 +1,4 @@
-// js/firebase.js
 
-// Your Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyD35VJ_bdT23bHujp9g8o0TnRjocaY_7Xw",
   authDomain: "planify-b6bce.firebaseapp.com",
@@ -11,17 +9,14 @@ const firebaseConfig = {
   measurementId: "G-RCF1VZHSKC"
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// expose globally so all JS files can access it
 window.auth = auth;
 window.db = db;
 
-// Handle UI for navigation links
 auth.onAuthStateChanged(user => {
   const authEls = document.querySelectorAll('.auth-only');
   const navLogin = document.getElementById('navLogin');
@@ -43,7 +38,6 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-// Attach logout listener when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("logoutBtn") ||
               document.querySelector('[data-action="logout"]');
